@@ -10,4 +10,5 @@
 P3tter-dev/P3tter-dev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
-<!--- It may take a while for me to return to Roblox as the hub is private and will be distributed to people with discord                               link below: 
+<!--- It may take a while for me to return to Roblox as the hub is private and will be distributed to people with discord                                   nick bellow:
+P3tter(@p3tter0219
