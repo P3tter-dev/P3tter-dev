@@ -1,1 +1,359 @@
-local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))() local Window = kavoUi.CreateLib("DeadlyHub","DarkTheme") local MainTab = Window:NewTab("Main") local MainSection = MainTab:NewSection("MainSection") MainSection:NewButton("NAME ESP", "Q to toggle on and off", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/ESP-Script/main/ESP.lua"))() end) MainSection:NewButton("ESP", "", function() local FillColor = Color3.fromRGB(175,25,255) local DepthMode = "AlwaysOnTop" local FillTransparency = 0.5 local OutlineColor = Color3.fromRGB(255,255,255) local OutlineTransparency = 0 local CoreGui = game:FindService("CoreGui") local Players = game:FindService("Players") local lp = Players.LocalPlayer local connections = {} local Storage = Instance.new("Folder") Storage.Parent = CoreGui Storage.Name = "Highlight_Storage" local function Highlight(plr) local Highlight = Instance.new("Highlight") Highlight.Name = plr.Name Highlight.FillColor = FillColor Highlight.DepthMode = DepthMode Highlight.FillTransparency = FillTransparency Highlight.OutlineColor = OutlineColor Highlight.OutlineTransparency = 0 Highlight.Parent = Storage local plrchar = plr.Character if plrchar then Highlight.Adornee = plrchar end connections[plr] = plr.CharacterAdded:Connect(function(char) Highlight.Adornee = char end) end Players.PlayerAdded:Connect(Highlight) for i,v in next, Players:GetPlayers() do Highlight(v) end Players.PlayerRemoving:Connect(function(plr) local plrname = plr.Name if Storage[plrname] then Storage[plrname]:Destroy() end if connections[plr] then connections[plr]:Disconnect() end end) end) MainSection:NewButton("Fling", nil, function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))() end) MainSection:NewButton("Fly", nil, function() loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")() end) MainSection:NewButton("Xray", "Press E to active/disable", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/xray/main/main"))() end) MainSection:NewButton("FullBright", nil, function() game:GetService("Lighting").Brightness = 2 game:GetService("Lighting").ClockTime = 14 game:GetService("Lighting").FogEnd = 100000 game:GetService("Lighting").GlobalShadows = false game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128) end) MainSection:NewButton("Infinite Jump", nil, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/infjump/main/main"))() end) MainSection:NewButton("Airswim", nil, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/airswim/main/main"))() end) local Games = Window:NewTab("GamesðŸŽ®") local GamesSection = Games:NewSection("Games") GamesSection:NewButton("ðŸ� BrookhavenðŸ� ", "", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))() end) GamesSection:NewButton("ðŸ”ªMM2ðŸ”ª", "", function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))() end) GamesSection:NewButton("BedwarsðŸ›Œ", "", function() 	loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()	 end) GamesSection:NewButton("Prison Life", "", function() loadstring(game:HttpGet('https://pastebin.com/raw/iZ64yzjE'))() end) GamesSection:NewButton("ðŸ’ªMuscle LegendsðŸ’ª", "", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))() end) GamesSection:NewButton("Break In", "", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Nikita365/Break-In-Story-/main/Break%20In%20Story%20Hub"))() end) GamesSection:NewButton("Nico's Nextbots", "", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/NicoNextBots", true))() end) GamesSection:NewButton("DoorsðŸ‘�", "", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))() end) GamesSection:NewButton("Evade", "", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Evade"))() end) GamesSection:NewButton("Rainbow Friends", "", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/Rainbow-Friends/main/Rainbow%20Friends"))() end) GamesSection:NewButton("Slap Battles", "", function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheScriptMaster1/ScriptMaster-Hub/main/scriptmasterhub.lua')))() end) GamesSection:NewButton("Cook Burgers", "", function() loadstring(game:HttpGet(('https://pastebin.com/raw/YUqvvEAB')))() end) local Admins = Window:NewTab("Admins") local AdminsSection = Admins:NewSection("Admins") AdminsSection:NewButton("Infinite Yield", nil, function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end) AdminsSection:NewButton("CMD-X", nil, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))() end) AdminsSection:NewButton("Fates Admin", nil, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))() end) local Misc = Window:NewTab("Misc") local MiscSection = Misc:NewSection("Misc") MiscSection:NewButton("Keyboard", nil, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))() end) MiscSection:NewButton("FE Animations GUI", nil, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))() end) MiscSection:NewButton("Rejoin", nil, function() local ts = game:GetService("TeleportService") local p = game:GetService("Players").LocalPlayer ts:Teleport(game.PlaceId, p) end) local Credits = Window:NewTab("Credits") local CreditsSection = Credits:NewSection("Credits") CreditsSection:NewLabel("Made by Deadly_Frenzy_") CreditsSection:NewLabel("Sub to Deadly_Frenzy_ on YouTube") CreditsSection:NewLabel("Follow deadly_frenzy_ on TikTok") CreditsSection:NewLabel("Deadly_Frenzy_ Roblox Account: F0X42512") CreditsSection:NewLabel("") CreditsSection:NewLabel("imgood_atnameing_things helped me") CreditsSection:NewLabel("Follow imgood_atnameing_things on TikTok") CreditsSection:NewLabel("imgood_atnameing_things Roblox Account: duckarmy609")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local player = Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- UI setup
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "ArceusHubPanel"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = player:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 320, 0, 150)
+frame.Position = UDim2.new(0, 20, 0.3, 0)
+frame.BackgroundColor3 = Color3.fromRGB(10, 20, 50) -- azul escuro
+frame.BorderSizePixel = 0
+frame.Parent = screenGui
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 30)
+title.BackgroundTransparency = 1
+title.Text = "Arceus Hub Panel"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 18
+title.Parent = frame
+
+local commandBox = Instance.new("TextBox")
+commandBox.Size = UDim2.new(1, -20, 0, 35)
+commandBox.Position = UDim2.new(0, 10, 0, 50)
+commandBox.BackgroundColor3 = Color3.fromRGB(30, 40, 80)
+commandBox.TextColor3 = Color3.new(1, 1, 1)
+commandBox.PlaceholderText = "Digite um comando e pressione Enter"
+commandBox.Font = Enum.Font.SourceSans
+commandBox.TextSize = 18
+commandBox.ClearTextOnFocus = false
+commandBox.Parent = frame
+
+local msgLabel = Instance.new("TextLabel")
+msgLabel.Size = UDim2.new(1, -20, 0, 25)
+msgLabel.Position = UDim2.new(0, 10, 0, 95)
+msgLabel.BackgroundTransparency = 1
+msgLabel.Text = ""
+msgLabel.TextColor3 = Color3.fromRGB(200, 255, 200)
+msgLabel.Font = Enum.Font.SourceSans
+msgLabel.TextSize = 14
+msgLabel.TextXAlignment = Enum.TextXAlignment.Left
+msgLabel.Parent = frame
+
+local minimizeBtn = Instance.new("TextButton")
+minimizeBtn.Size = UDim2.new(0, 25, 0, 25)
+minimizeBtn.Position = UDim2.new(1, -30, 0, 5)
+minimizeBtn.BackgroundColor3 = Color3.fromRGB(20, 40, 80)
+minimizeBtn.Text = "-"
+minimizeBtn.TextColor3 = Color3.new(1, 1, 1)
+minimizeBtn.Font = Enum.Font.SourceSansBold
+minimizeBtn.TextSize = 18
+minimizeBtn.Parent = frame
+
+local ballButton = Instance.new("TextButton")
+ballButton.Size = UDim2.new(0, 50, 0, 50)
+ballButton.Position = UDim2.new(0, 20, 0.3, 0)
+ballButton.BackgroundColor3 = Color3.fromRGB(20, 40, 80)
+ballButton.Visible = false
+ballButton.Parent = screenGui
+ballButton.AutoButtonColor = true
+ballButton.BorderSizePixel = 0
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(1, 0)
+corner.Parent = ballButton
+
+-- Dragging logic para frame e bolinha
+local function makeDraggable(guiObject)
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+
+	guiObject.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = guiObject.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	guiObject.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+
+	RunService.RenderStepped:Connect(function()
+		if dragging and dragInput then
+			local delta = dragInput.Position - dragStart
+			guiObject.Position = UDim2.new(
+				math.clamp(startPos.X.Scale, 0, 1),
+				math.clamp(startPos.X.Offset + delta.X, 0, workspace.CurrentCamera.ViewportSize.X - guiObject.AbsoluteSize.X),
+				math.clamp(startPos.Y.Scale, 0, 1),
+				math.clamp(startPos.Y.Offset + delta.Y, 0, workspace.CurrentCamera.ViewportSize.Y - guiObject.AbsoluteSize.Y)
+			)
+		end
+	end)
+end
+
+makeDraggable(frame)
+makeDraggable(ballButton)
+
+minimizeBtn.MouseButton1Click:Connect(function()
+	frame.Visible = false
+	ballButton.Visible = true
+end)
+ballButton.MouseButton1Click:Connect(function()
+	frame.Visible = true
+	ballButton.Visible = false
+end)
+
+-- Estados
+local states = {
+	infiniteJump = false,
+	noclip = false,
+	godmode = false,
+	fly = false,
+	speed = 16,
+	jumpPower = 50,
+	tpTool = false,
+}
+
+local humanoid, character, rootPart
+local flyVelocity, flyConnection, godConn, noclipLoop, connJump, tpToolConnection
+
+local function updateCharacter()
+	character = player.Character
+	if character then
+		humanoid = character:FindFirstChildOfClass("Humanoid")
+		rootPart = character:FindFirstChild("HumanoidRootPart")
+		if humanoid then
+			humanoid.JumpPower = states.jumpPower
+			humanoid.WalkSpeed = states.speed
+		end
+	end
+end
+updateCharacter()
+player.CharacterAdded:Connect(function()
+	wait(0.5)
+	updateCharacter()
+	-- reaplica estados
+	if states.infiniteJump then toggleInfiniteJump(true) end
+	if states.noclip then toggleNoclip(true) end
+	if states.godmode then toggleGodmode(true) end
+	if states.fly then toggleFly(true) end
+	if states.tpTool then toggleTpTool(true) end
+	if humanoid then
+		humanoid.WalkSpeed = states.speed
+		humanoid.JumpPower = states.jumpPower
+	end
+end)
+
+function toggleInfiniteJump(on)
+	if on then
+		if connJump then connJump:Disconnect() end
+		connJump = UserInputService.JumpRequest:Connect(function()
+			if humanoid and humanoid.Health > 0 then
+				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+			end
+		end)
+	else
+		if connJump then connJump:Disconnect() connJump=nil end
+	end
+	states.infiniteJump = on
+end
+
+function toggleNoclip(on)
+	if on then
+		noclipLoop = RunService.Stepped:Connect(function()
+			if character then
+				for _, part in ipairs(character:GetDescendants()) do
+					if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+						part.CanCollide = false
+					end
+				end
+			end
+		end)
+	else
+		if noclipLoop then noclipLoop:Disconnect() noclipLoop=nil end
+		if character then
+			for _, part in ipairs(character:GetDescendants()) do
+				if part:IsA("BasePart") then
+					part.CanCollide = true
+				end
+			end
+		end
+	end
+	states.noclip = on
+end
+
+function toggleGodmode(on)
+	if on and humanoid then
+		humanoid.MaxHealth = math.huge
+		humanoid.Health = humanoid.MaxHealth
+		if godConn then godConn:Disconnect() end
+		godConn = humanoid.HealthChanged:Connect(function()
+			if humanoid.Health < 1 then
+				humanoid.Health = humanoid.MaxHealth
+			end
+		end)
+	else
+		if godConn then godConn:Disconnect() godConn=nil end
+		if humanoid then
+			humanoid.MaxHealth = 100
+			if humanoid.Health > 100 then humanoid.Health = 100 end
+		end
+	end
+	states.godmode = on
+end
+
+function toggleFly(on)
+	if on and rootPart then
+		if flyConnection then flyConnection:Disconnect() flyConnection=nil end
+		flyVelocity = Instance.new("BodyVelocity")
+		flyVelocity.MaxForce = Vector3.new(1e5,1e5,1e5)
+		flyVelocity.Velocity = Vector3.new(0,0,0)
+		flyVelocity.Parent = rootPart
+
+		flyConnection = RunService.Heartbeat:Connect(function()
+			local moveDir = Vector3.new(0,0,0)
+			if UserInputService:IsKeyDown(Enum.KeyCode.W) then moveDir = moveDir + workspace.CurrentCamera.CFrame.LookVector end
+			if UserInputService:IsKeyDown(Enum.KeyCode.S) then moveDir = moveDir - workspace.CurrentCamera.CFrame.LookVector end
+			if UserInputService:IsKeyDown(Enum.KeyCode.A) then moveDir = moveDir - workspace.CurrentCamera.CFrame.RightVector end
+			if UserInputService:IsKeyDown(Enum.KeyCode.D) then moveDir = moveDir + workspace.CurrentCamera.CFrame.RightVector end
+			if UserInputService:IsKeyDown(Enum.KeyCode.Space) then moveDir = moveDir + Vector3.new(0,1,0) end
+			if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then moveDir = moveDir - Vector3.new(0,1,0) end
+			if moveDir.Magnitude > 0 then
+				flyVelocity.Velocity = moveDir.Unit * 50
+			else
+				flyVelocity.Velocity = Vector3.new(0,0,0)
+			end
+		end)
+	else
+		if flyConnection then flyConnection:Disconnect() flyConnection=nil end
+		if flyVelocity then flyVelocity:Destroy() flyVelocity=nil end
+	end
+	states.fly = on
+end
+
+function toggleTpTool(on)
+	states.tpTool = on
+	if on then
+		tpToolConnection = mouse.Button1Down:Connect(function()
+			if rootPart then
+				local pos = mouse.Hit + Vector3.new(0,3,0)
+				rootPart.CFrame = CFrame.new(pos.X, pos.Y, pos.Z)
+			end
+		end)
+	else
+		if tpToolConnection then tpToolConnection:Disconnect() tpToolConnection=nil end
+	end
+end
+
+local function runCommand(cmd)
+	local args = {}
+	for word in cmd:lower():gmatch("%S+") do
+		table.insert(args, word)
+	end
+	if #args == 0 then return end
+
+	local command = args[1]
+
+	if command == "infjump" or command == "infinitejump" then
+		local newState = not states.infiniteJump
+		toggleInfiniteJump(newState)
+		return "InfiniteJump "..(newState and "ativado" or "desativado")
+
+	elseif command == "noclip" then
+		local newState = not states.noclip
+		toggleNoclip(newState)
+		return "Noclip "..(newState and "ativado" or "desativado")
+
+	elseif command == "godmode" then
+		local newState = not states.godmode
+		toggleGodmode(newState)
+		return "Godmode "..(newState and "ativado" or "desativado")
+
+	elseif command == "fly" then
+		local newState = not states.fly
+		toggleFly(newState)
+		return "Fly "..(newState and "ativado" or "desativado")
+
+	elseif command == "tptool" then
+		local newState = not states.tpTool
+		toggleTpTool(newState)
+		return "TP Tool "..(newState and "ativado" or "desativado")
+
+	elseif command == "speed" then
+		local speedVal = tonumber(args[2])
+		if speedVal and speedVal > 0 and speedVal <= 500 then
+			states.speed = speedVal
+			if humanoid then humanoid.WalkSpeed = speedVal end
+			return "Speed setado para "..speedVal
+		else
+			return "Valor inválido para speed (1-500)"
+		end
+
+	elseif command == "jump" then
+		local jumpVal = tonumber(args[2])
+		if jumpVal and jumpVal >= 50 and jumpVal <= 500 then
+			states.jumpPower = jumpVal
+			if humanoid then humanoid.JumpPower = jumpVal end
+			return "JumpPower setado para "..jumpVal
+		else
+			return "Valor inválido para jump (50-500)"
+		end
+
+	elseif command == "tp" then
+		if args[2] and args[3] and args[4] then
+			local x,y,z = tonumber(args[2]), tonumber(args[3]), tonumber(args[4])
+			if x and y and z and rootPart then
+				rootPart.CFrame = CFrame.new(x,y,z)
+				return string.format("Teleportado para (%.1f, %.1f, %.1f)", x,y,z)
+			else
+				return "Coordenadas inválidas para tp"
+			end
+		else
+			return "Use: tp x y z"
+		end
+
+	elseif command == "help" then
+		return [[
+Comandos disponíveis:
+infjump
+noclip
+godmode
+fly
+tptool
+speed [1-500]
+jump [50-500]
+tp x y z
+		]]
+
+	else
+		return "Comando não encontrado. Digite 'help'."
+	end
+end
+
+commandBox.FocusLost:Connect(function(enterPressed)
+	if enterPressed then
+		local input = commandBox.Text
+		local result = runCommand(input)
+		msgLabel.Text = result or ""
+	end
+end)
